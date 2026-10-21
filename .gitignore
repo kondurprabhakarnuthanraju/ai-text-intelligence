@@ -9,3 +9,27 @@ __pycache__/
 .env.local
 training/cache/
 .DS_Store
+node_modules/
+.next/
+out/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+training/cache/
+.DS_Store
+artifacts/text_detector_backup.joblib
+artifacts/text_detector_before_bert.joblib
+artifacts/text_detector_predeploy.joblib
+artifacts/text_detector_predeploy.tmp
+prepare_deploy.py
+check_model.py
+test_predictions.py
+
+# Local deployment diagnostics and backups
+*.broken.bak
+diagnose_bert.py
+test_ensemble_fix.py

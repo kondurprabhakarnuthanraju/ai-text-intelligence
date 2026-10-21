@@ -1,5 +1,9 @@
-streamlit>=1.40,<2.0
-scikit-learn>=1.5,<2.0
-joblib>=1.4,<2.0
-langchain-core>=0.3,<2.0
-langchain-openai>=0.2,<2.0
+﻿streamlit==1.66.0
+scikit-learn==1.9.1
+joblib==1.6.0
+numpy
+pandas
+torch==2.14.1
+transformers==4.57.6
+langchain-core
+langchain-openai

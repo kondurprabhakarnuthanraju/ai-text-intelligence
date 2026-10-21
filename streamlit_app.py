@@ -87,7 +87,7 @@ def explain_result(text: str, prediction: dict[str, Any]) -> str:
 
 with st.sidebar:
     st.subheader("About this demo")
-    st.write("Model: TF-IDF + Logistic Regression")
+    st.write("Model: TF-IDF + Logistic Regression + Random Forest + DistilBERT")
     st.write("Maximum input: 20,000 characters")
     st.info(
         "For research and demonstration only. Human text may be flagged, and generated "
