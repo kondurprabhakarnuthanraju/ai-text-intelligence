@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useMemo, useState } from "react";
 
@@ -10,8 +10,7 @@ type Prediction = {
   metrics?: Record<string, unknown>;
   caveat: string;
 };
-
-const API_URL = (process.env.NEXT_PUBLIC_API_URL || "").replace(/\/$/, "");
+const API_URL = "";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -86,7 +85,7 @@ export default function Home() {
   return (
     <main className="page-shell">
       <nav className="nav">
-        <a className="brand" href="#"><span className="brand-mark">✳</span> TextSignal</a>
+        <a className="brand" href="#"><span className="brand-mark">âœ³</span> TextSignal</a>
         <span className="nav-tag">ML + LangChain demo</span>
       </nav>
 
@@ -120,7 +119,7 @@ export default function Home() {
             <button className="text-button" onClick={clearAll} type="button">Clear text</button>
           </div>
           <button className="primary-button" disabled={!canAnalyze} onClick={analyze} type="button">
-            {loading ? <><span className="spinner" /> Analyzing…</> : <>Analyze text <span>↗</span></>}
+            {loading ? <><span className="spinner" /> Analyzingâ€¦</> : <>Analyze text <span>â†—</span></>}
           </button>
           <p className="microcopy">Your pasted text is sent to the API for prediction. Do not submit confidential or sensitive material.</p>
         </div>
@@ -131,12 +130,12 @@ export default function Home() {
               <div className="step-label">02 / RESULT</div>
               <h2>Analysis snapshot</h2>
             </div>
-            <span className="model-chip">TF-IDF · LR</span>
+            <span className="model-chip">TF-IDF Â· LR</span>
           </div>
 
           {!prediction && !loading && (
             <div className="empty-state">
-              <div className="empty-icon">⌁</div>
+              <div className="empty-icon">âŒ</div>
               <h3>Your result will appear here</h3>
               <p>Run an analysis to see the model's label and score distribution.</p>
             </div>
@@ -170,7 +169,7 @@ export default function Home() {
               </div>
               <div className="notice"><strong>Read with care</strong><p>{prediction.caveat}</p></div>
               <button className="secondary-button" disabled={explaining} onClick={explain} type="button">
-                {explaining ? "Preparing explanation…" : "Explain this result with LangChain"} <span>↗</span>
+                {explaining ? "Preparing explanationâ€¦" : "Explain this result with LangChain"} <span>â†—</span>
               </button>
               {explanation && <div className="explanation"><div className="step-label">LANGCHAIN EXPLANATION</div><p>{explanation}</p></div>}
             </div>
@@ -187,9 +186,10 @@ export default function Home() {
       </section>
 
       <footer>
-        <span>Built with Next.js · FastAPI · scikit-learn · LangChain</span>
+        <span>Built with Next.js Â· FastAPI Â· scikit-learn Â· LangChain</span>
         <span>For research and demonstration only</span>
       </footer>
     </main>
   );
 }
+
